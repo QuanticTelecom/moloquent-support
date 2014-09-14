@@ -18,6 +18,8 @@ class MoloquentSupportServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
+		$this->app->register('QuanticTelecom\Support\SupportServiceProvider');
+
 		$this->app->bind(
             'QuanticTelecom\Support\Repositories\TicketRepository',
             'QuanticTelecom\MoloquentSupport\Repositories\MoloquentTicketRepository'
